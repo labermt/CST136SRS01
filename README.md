@@ -5,7 +5,7 @@ Hi An! :-)
 
 Student Name: <Not your secret Class ID>
 
-Solution Name: CST136SRS01
+Solution Name: CST136SRS01  
 Project Name(s): Exceptional
 
 ---
