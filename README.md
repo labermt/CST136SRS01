@@ -23,7 +23,7 @@ Create the default ctor by delgating, default parameters, or default generation.
 
 Create a constexpr member for kUnboundLower and kUnboundUpper. 
 
-Create lower bound and upper bound setters and getters. Handle narrowing conversions (float, double, long, unsigned, ...). 
+Create lower bound and upper bound setters and getters. Handle narrowing conversions (float, double, long, unsigned, ...). Allow std::string and c-strings for setters and handle non-valid strings. 
 
 Create setters for the value and throw an exception if the value exceeds the bounds. Ensure a strong exception guarantee. 
 
