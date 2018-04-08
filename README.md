@@ -31,7 +31,7 @@ Create a getter for the value.
 
 Devise a strategy for dealing with changing bounds when the value is outside the bounds. 
 
-Use noexcept (and const) when and where applicable. 
+Don't forget to use noexcept and const when and where applicable. 
 
 Describe the reason(s) for your default ctor technique.  
 
