@@ -16,8 +16,8 @@ Purpose:
 
 Create an integer range class or struct named "IntRange".
 
-Create a ctor that accepts: \[lower bound, upper bound)
-Create a default ctor that has no bounds
+Create a ctor that accepts: \[lower bound, upper bound).  
+Create a default ctor is unbound on both upper and lower values.  
 
 Create the default ctor by delgating, default parameters, or default generation. 
 
