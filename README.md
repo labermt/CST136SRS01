@@ -1,7 +1,7 @@
 # CST136SRS01
-Mamate Signal
+Mayday Mamate
 
-Student Name: <Not your secret Class ID>
+Grading Name: 
 
 Solution Name: CST136SRS01
 Project Name(s): Exceptional
