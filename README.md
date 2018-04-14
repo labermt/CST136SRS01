@@ -1,7 +1,7 @@
 # CST136SRS01
 Mayday Mamate
 
-Grading Name: 
+Grading Name: Chris Michalsen
 
 Solution Name: CST136SRS01  
 Project Name(s): Exceptional
