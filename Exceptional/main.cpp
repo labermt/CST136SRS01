@@ -10,9 +10,11 @@ int main()
 {
 	try
 	{
-		// Narrowing conversion 
+		// Narrowing conversion example
 		auto const input {0.0};
 		auto test = gsl::narrow<int>(input);
+
+		auto classTest { RangeInt::getIntFromConsole() };
 
 		//throw "test";
 	}

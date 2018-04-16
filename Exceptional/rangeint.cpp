@@ -1,5 +1,8 @@
 ﻿#include "stdafx.h"
 #include "rangeint.h"
+#include <iostream>
+#include <string>
+#include <sstream>
 
 
 RangeInt::RangeInt() :
@@ -24,7 +27,40 @@ int RangeInt::getValue() const
 	return value_;
 }
 
-void RangeInt::setValue(int const value)
+void RangeInt::setLower()
 {
-	value_ = value;
+	kUnboundLower_ = getIntFromConsole();
+}
+
+void RangeInt::setUpper()
+{
+	kUnboundUpper_ = getIntFromConsole();
+}
+
+void RangeInt::setValue()
+{
+	value_ = getIntFromConsole();
+}
+
+int RangeInt::getIntFromConsole() 
+{
+	std::string input;
+	int safeInt;
+
+	// TODO: Does not fail if double is input
+	while (true)
+	{
+		std::cout << "Set lower to: ";
+
+		getline(std::cin, input);
+		std::stringstream toInt(input);
+
+		if (toInt >> safeInt)
+		{
+			break;
+		}
+		std::cout << "Invalid number, please try again." << std::endl;
+	}
+
+	return safeInt;
 }

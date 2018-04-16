@@ -4,8 +4,8 @@
 class RangeInt
 {
 private:
-	int const kUnboundLower_;
-	int const kUnboundUpper_;
+	int kUnboundLower_;
+	int kUnboundUpper_;
 	int value_;
 
 public:
@@ -16,6 +16,10 @@ public:
 	int getUpper() const;
 	int getValue() const;
 
-	void setValue(int);
+	void setLower();
+	void setUpper();
+	void setValue();
+
+	int static getIntFromConsole();
 	
 };
