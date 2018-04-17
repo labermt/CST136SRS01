@@ -15,20 +15,20 @@ Purpose:
 - Understand the exception class hierarchy and how to extend it. 
 - Learn about ctor options. 
 
-Create an integer range class or struct named "RangeInt".  
+[x] Create an integer range class or struct named "RangeInt".  
 
-Create a ctor that accepts: \[lower bound, upper bound).  
-Create a default ctor is unbound on both upper and lower values.  
+[ ] Create a ctor that accepts: \[lower bound, upper bound).  
+[ ] Create a default ctor is unbound on both upper and lower values.  
 
-Create the default ctor by delgating, default parameters, or default generation.  
+[ ] Create the default ctor by delgating, default parameters, or default generation.  
 
-Create a constexpr member for kUnboundLower and kUnboundUpper.  
+[ ] Create a constexpr member for kUnboundLower and kUnboundUpper.  
 
-Create lower bound and upper bound setters and getters. Handle narrowing conversions (float, double, long, unsigned, ...). Allow std::string and c-strings for setters and handle non-valid strings.  
+[ ] Create lower bound and upper bound setters and getters. Handle narrowing conversions (float, double, long, unsigned, ...). Allow std::string and c-strings for setters and handle non-valid strings.  
 
-Create setters for the value and throw an exception if the value exceeds the bounds. Ensure a strong exception guarantee.  
+[ ] Create setters for the value and throw an exception if the value exceeds the bounds. Ensure a strong exception guarantee.  
 
-Create a getter for the value.  
+[ ] Create a getter for the value.  
 
 Devise a strategy for dealing with changing bounds when the value is outside the bounds.  
 
