@@ -1,24 +1,24 @@
 #pragma once
 class RangeInt
-{	
+{
 private:
-	int kUnboundLower_;
-	int kUnboundUpper_;
-	int value_;
+	int kUnboundLower_{ -117 };
+	int kUnboundUpper_{ 117 };
+	int value_{ 0 };
 
-	constexpr auto kUnboundLower();
-	constexpr auto kUnboundUpper();
+	//constexpr int kUnboundLower(int lower);
+	//constexpr int kUnboundUpper(int upper);
 
 public:
-	RangeInt(int const lower, int const upper);
+	RangeInt(int const min, int const max);
 	RangeInt();
-	
-	auto get_lower() const;
-	auto get_upper() const;
-	auto get_value()const;
 
-	void set_lower(int num);
-	void set_upper(int num);
-	void set_value(int num);
+	int get_lower() const;
+	int get_upper() const;
+	int get_value() const;
+
+	void set_lower(int const num);
+	void set_upper(int const num);
+	void set_value(int const num);
 };
 

@@ -17,10 +17,10 @@ Purpose:
 
 [x] Create an integer range class or struct named "RangeInt".  
 
-[ ] Create a ctor that accepts: \[lower bound, upper bound).  
-[ ] Create a default ctor is unbound on both upper and lower values.  
+[x] Create a ctor that accepts: \[lower bound, upper bound).  
+[x] Create a default ctor is unbound on both upper and lower values.  
 
-[ ] Create the default ctor by delgating, default parameters, or default generation.  
+[x] Create the default ctor by delgating, default parameters, or default generation.  
 
 [ ] Create a constexpr member for kUnboundLower and kUnboundUpper.  
 
