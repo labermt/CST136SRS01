@@ -2,12 +2,12 @@
 class RangeInt
 {
 private:
-	int kUnboundLower_{ -117 };
-	int kUnboundUpper_{ 117 };
+	const int kUnboundLower_;
+	const int kUnboundUpper_;
 	int value_{ 0 };
 
-	//constexpr int kUnboundLower(int lower);
-	//constexpr int kUnboundUpper(int upper);
+	constexpr int kUnboundLower(int num);
+	constexpr int kUnboundUpper(int num);
 
 public:
 	RangeInt(int const min, int const max);
@@ -21,4 +21,14 @@ public:
 	void set_upper(int const num);
 	void set_value(int const num);
 };
+
+constexpr int RangeInt::kUnboundLower(int const num)
+{
+
+}
+
+constexpr int RangeInt::kUnboundUpper(int const num)
+{
+
+}
 
