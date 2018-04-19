@@ -17,7 +17,7 @@ Purpose:
 
 Create an integer range class or struct named "RangeInt".  
 
-Create a ctor that accepts: \[lower bound, upper bound).  
+Create a ctor that accepts: \[lower bound, upper bound). 
 Create a default ctor is unbound on both upper and lower values.  
 
 Create the default ctor by delegating, default parameters, or default generation.  
