@@ -1,10 +1,22 @@
 # CST136SRS01
 Mayday Mamate
 
-Grading Name: 
+Grading Name: Phantump
 
 Solution Name: CST136SRS01  
 Project Name(s): Exceptional
+
+Errors: constexpr members are missing. The program can not handle conversions, and parameters must be passed as ints.
+
+Notes: The program is set up more as a test of exception handling, as it requires no input from the user.
+Instead, it will show an exception being thrown when a logical misstep is made (e.x. trying to set the lower bound above the upper bound)
+follow by the same function call with the logic corrected, (setting the lower bound lower, or at least below the current value)
+Whenever a RangeInt is made, I default the value to the lower bound for the sake of having the space definded into an int.
+Because I used a ctor, I had to specifically ask for the default as well, however, I have default values set up, so when it is called, 
+I pass it no parameters and the default value is 0.
+I choose to use a Class, because the spec requested setters and getters, which implicectly implies to me that the values are to remain private,
+and according to CPPguidelines, a class is better suited to that, where as a struct would be better if I wanted to change out numbers more freely.
+
 
 ---
 
