@@ -8,13 +8,16 @@
 
 int main()
 {
+
+	int i = 5;
+	auto j = 5.0;
 	try
 	{
 		// Narrowing conversion example
-		auto const input {0.0};
+		auto const input{ 0.0 };
 		auto test = gsl::narrow<int>(input);
 
-		auto classTest { RangeInt::getIntFromConsole() };
+		auto classTest{ RangeInt::getIntFromConsole() };
 
 		//throw "test";
 	}
@@ -31,5 +34,5 @@ int main()
 		std::cout << "default exception";
 	}
 
-    return 0;
+	return 0;
 }

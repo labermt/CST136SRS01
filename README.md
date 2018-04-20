@@ -10,6 +10,11 @@ Project Name(s): Exceptional
 
 ---
 
+ The chosen constructor makes use of default generation as suggested in section [C.48 of the C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c48-prefer-in-class-initializers-to-member-initializers-in-constructors-for-constant-initializers).
+
+ RangeInt is a class and not a struct, as it has private data members as per section [C.8 of the C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c8-use-class-rather-than-struct-if-any-member-is-non-public) 
+---
+
 Purpose:
 
 - Pratice using various C++ error handling mechanisms.
