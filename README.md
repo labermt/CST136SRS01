@@ -20,7 +20,7 @@ Create an integer range class or struct named "RangeInt".
 Create a ctor that accepts: \[lower bound, upper bound).  
 Create a default ctor that is unbound on both upper and lower values.  
 
-Create the default ctor by delegating, default parameters, or default generation.  
+Create the default ctor by delegating, default parameters, or default member generation.  
 
 Create a constexpr member for kUnboundLower and kUnboundUpper.  
 
