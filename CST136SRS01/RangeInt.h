@@ -10,7 +10,7 @@ private:
 
 public:
 	RangeInt(const int d0, const int d1);
-	RangeInt();
+	RangeInt(){};
 
 	void setLower(const int d0);
 	void setUpper(const int d0);

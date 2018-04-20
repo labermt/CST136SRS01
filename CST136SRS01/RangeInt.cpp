@@ -1,37 +1,38 @@
 #include "stdafx.h"
 #include "RangeInt.h"
+#include "Exception.h"
 
 RangeInt::RangeInt(const int d0, const int d1) : lower_(d0), value_(d0), upper_(d1), limits_(true)
 {
 	if (lower_ > upper_)
 	{
-		//fail
+		throw badlimits();
 	}
 }
 
 void RangeInt::setLower(const int d0)
 {
-	lower_ = d0;
-	if (lower_ > upper_)
+	if (d0 > value_)
 	{
-		//fail
+		throw badlower();
 	}
+	lower_ = d0;
 }
 
 void RangeInt::setUpper(const int d0)
 {
-	upper_ = d0;
-	if (lower_ > upper_)
+	if (d0 <= value_)
 	{
-		//fail
+		throw badupper();
 	}
+	upper_ = d0;
 }
 
 void RangeInt::setValue(const int d0)
 {
-	if (limits_ && d0 < lower_ || d0 >= upper_)
+	if (limits_ && (d0 < lower_ || d0 >= upper_))
 	{
-		//fail
+		throw badvalue();
 	}
 	value_ = d0;
 }
