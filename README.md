@@ -26,13 +26,13 @@ Create a constexpr member for kUnboundLower and kUnboundUpper.
 
 Create lower bound and upper bound setters and getters. Handle narrowing conversions (float, double, long, unsigned, ...). Allow std::string and c-strings for setters and handle non-valid strings.  
 
-Create setter for the value and throw an exception if the value exceeds the bounds. Ensure a strong exception guarantee.  
+Create a setter for the value and throw an exception if the value exceeds the bounds. Ensure a strong exception guarantee.  
 
 Create a getter for the value.  
 
 Devise a strategy for dealing with changing bounds when the value is outside the bounds.  
 
-Write test code in main the exercises your code. Be sure to use a try/catch block and std::exception::what() in your testing code.  
+Write test code in main the exercises your code. Be sure to use a try/catch block and std::exception::what() or derived in your testing code.  
 
 Don't forget to use noexcept and const when and where applicable.  
 
