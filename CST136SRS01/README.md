@@ -7,7 +7,11 @@ Solution Name: CST136SRS01
 Project Name(s): Exceptional
 
 Notes: Describe the reason(s) for your default ctor technique in the README.md.
-		- 
+		- I used the max value of int for the default upper and lower bounds values in my default constructor. If we use 0, then user can't set a value until bounds are changed. 
+		Describe the reason you made RangeInt a struct or class. (see the cppguidelines for details.)
+		- I made RangeInt a class because it is my preference. From what I learned they vary only slightyly from eachother. I had alot of functions so a class seemed more appropriate by convention.
+
+Issues: 
 		
 
 ---

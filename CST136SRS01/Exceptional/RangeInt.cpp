@@ -10,7 +10,6 @@
 using namespace std;
 using namespace gsl;
 
-
 //private vars
 int upperBound = 0;
 int lowerBound = 0;
@@ -28,7 +27,6 @@ constexpr int RangeInt::unboundLower() {
 
 	return numeric_limits<int>::min();
 }
-
 
 //public
 

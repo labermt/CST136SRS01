@@ -6,6 +6,7 @@ using namespace std;
 
 class RangeInt
 {
+
 private:
 	//vars
 	int upperBound;
@@ -26,8 +27,6 @@ public:
 
 	//destructor
 	~RangeInt();
-
-	
 
 	//setters
 	void setValue(int v);
@@ -55,6 +54,5 @@ public:
 	constexpr int unboundUpper();
 	constexpr int unboundLower();
 
-	
 };
 
