@@ -1,12 +1,35 @@
 # CST136SRS01
 Mayday Mamate
 
-Grading Name: 
+Grading Name: Nathan TOut
 
 Solution Name: CST136SRS01  
 Project Name(s): Exceptional
 
 ---
+notes:
+
+---
+issues:
+- unhandled error if the input is a string with a decimal.  still goes through and does proper conversion though.
+- I get messages about possible loss of data with the narrowing.
+
+---
+Describe the reason(s) for your default ctor technique in the README.md.  
+- this was the format I saw on geeksforgeeks.org. 
+- I set the lower and upper unbounds to the numeric limits min and max because
+- I did not want to guess a random limit.
+
+Describe the reason you made RangeInt a struct or class. (see the cppguidelines for details.)
+- cppguidelines suggested that if there is anything private to use a class
+
+---
+Helps:
+- https://www.geeksforgeeks.org/constructors-c/
+- https://msdn.microsoft.com/en-us/library/hh279667.aspx
+- http://en.cppreference.com/w/cpp/types/numeric_limits
+- http://www.cplusplus.com/reference/exception/exception/what/
+- http://www.cplusplus.com/reference/stdexcept/logic_error/
 
 Purpose:
 
@@ -16,26 +39,5 @@ Purpose:
 - Learn about ctor options. 
 
 Create an integer range class or struct named "RangeInt".  
-
 Create a ctor that accepts: \[lower bound, upper bound).  
 Create a default ctor that is unbound on both upper and lower values.  
-
-Create the default ctor by delegating, default parameters, or default member generation.  
-
-Create a constexpr member for kUnboundLower and kUnboundUpper.  
-
-Create lower bound and upper bound setters and getters. Handle narrowing conversions (float, double, long, unsigned, ...). Allow std::string and c-strings for setters and handle non-valid strings.  
-
-Create a setter for the value and throw an exception if the value exceeds the bounds. Ensure a strong exception guarantee.  
-
-Create a getter for the value.  
-
-Devise a strategy for dealing with changing bounds when the value is outside the bounds.  
-
-Write test code in main the exercises your code. Be sure to use a try/catch block and std::exception::what() or derived in your testing code.  
-
-Don't forget to use noexcept and const when and where applicable.  
-
-Describe the reason(s) for your default ctor technique in the README.md.  
-
-Describe the reason you made RangeInt a struct or class. (see the cppguidelines for details.)
