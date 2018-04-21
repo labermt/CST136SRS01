@@ -6,6 +6,10 @@ Grading Name:
 Solution Name: CST136SRS01  
 Project Name(s): Exceptional
 
+Notes: Describe the reason(s) for your default ctor technique in the README.md.
+		- 
+		
+
 ---
 
 Purpose:
