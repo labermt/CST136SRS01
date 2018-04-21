@@ -57,13 +57,13 @@ void RangeInt::set_value(unsigned const num)
 
 void RangeInt::set_value(string const num)
 {
-	istringstream iss(value_);
-
-	int temp;
-
-	iss >> temp;
-
-	set_value(temp); 
+	auto int_num{ 0 };
+	std::istringstream iss(num);
+	if (!(iss >> int_num) || iss.bad())
+	{
+		throw std::invalid_argument("String was bad");
+	}
+	set_value(int_num);
 }
 
 
