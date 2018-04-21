@@ -32,6 +32,12 @@ figure it out.
 
 Well, I tried my best. :)
 
+
+What I learned during presentations:
+When I tried using narrow for converting a double to an int, I only used doubles with decimal places which narrow cannot convert to an int. So everything else (short, double with no decimal places, etc) could have have worked if I tested them. I also could have used istringstreams to convert cstrings and strings into ints. Thought of that at midnight.
+
+I also figured out why I misunderstood kUnboundLower and kUnboundUpper. I thought those WERE the bounds but now I know they were supposed to be the max and min of int, which I used to initialize the bounds in the constructor. In the SRS I would clarify that there are differences between the kUnbounds and the actual RangeInt bounds. This would have fixed my constexpr confusion.
+
 ---
 
 Purpose:
