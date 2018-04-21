@@ -55,7 +55,7 @@ void RangeInt::setLower(const long double lower)
 
 	if(lower > value_) // Will describe strategy in presentation. To put it short, someone changing the bounds of the RangeInt likely doesn't want to have to check the value first, so no exception
 	{
-		value_ = lower;
+		value_ = gsl::narrow<int>(lower);
 	}
 
 	lower_ = gsl::narrow<int>(lower);
@@ -121,7 +121,7 @@ void RangeInt::setUpper(const long double upper)
 
 	if (upper <= value_) // Will describe strategy in presentation. To put it short, someone changing the bounds of the RangeInt likely doesn't want to have to check the value first, so no exception
 	{
-		value_ = upper - 1;
+		value_ = gsl::narrow<int>(upper) - 1;
 	}
 
 	upper_ = gsl::narrow<int>(upper);
