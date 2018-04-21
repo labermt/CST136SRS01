@@ -2,10 +2,12 @@
 
 Mayday Mamate
 
-Grading Name:
+Grading Name: Fennekin
 
 Solution Name: CST136SRS01
 Project Name(s): Exceptional
+
+Notes: constructor needs to take default types convertable to int, else exception will be thrown.
 
 ---
 
