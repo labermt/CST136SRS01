@@ -1,13 +1,11 @@
 #include "stdafx.h"
 #include "RangeInt.h"
 #include "ErrorHandler.h"
-#include <exception>
-#include <iostream>
 
 using namespace std;
 
 
-	RangeInt::RangeInt(int lowerBound, int upperBound)
+	RangeInt::RangeInt(const int lowerBound, const int upperBound)
 		:kUnboundLower{ false },
 		KUnboundUpper{ false }
 	{
@@ -29,7 +27,7 @@ using namespace std;
 	}
 
 
-	void RangeInt::setLowerBound(int lowerBoundValue)
+	void RangeInt::setLowerBound(const int lowerBoundValue)
 	{
 		lowerBound = lowerBoundValue;
 	}
@@ -49,7 +47,7 @@ using namespace std;
 	}
 
 
-	void RangeInt::setUpperBound(int upperBoundValue)
+	void RangeInt::setUpperBound(const int upperBoundValue)
 	{
 		upperBound = upperBoundValue;
 	}
@@ -69,12 +67,12 @@ using namespace std;
 	}
 
 
-	void RangeInt::setValue(int value)
+	void RangeInt::setValue(const int value)
 	{
 
 		// verify that the value being set is within the bounds and that 
-		if (value < lowerBound && kUnboundLower == false
-			|| value > upperBound && KUnboundUpper == false)
+		if (value < lowerBound && !kUnboundLower
+			|| value > upperBound && !KUnboundUpper)
 			throw ErrorHandler::outOfBounds();
 		chosenValue = value;
 	}
