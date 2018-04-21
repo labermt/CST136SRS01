@@ -43,4 +43,4 @@ Describe the reason(s) for your default ctor technique in the README.md.
 
 
 Describe the reason you made RangeInt a struct or class. (see the cppguidelines for details.)
-	Chose class because of C.8 of cpp guidelines stating use class if any data member is non public
+	Chose class because of C.2 & C.8 of cpp guidelines stating use class if any data member is non public

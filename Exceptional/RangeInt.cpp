@@ -21,7 +21,7 @@ void RangeInt::set_upper(int const num)
 	{
 		throw std::out_of_range("Tried to set upper bound out of range");
 	}
-	upper_bound_ = num;
+	upper_bound_ = num -1;
 }
 
 void RangeInt::set_value(int const num)
@@ -186,7 +186,7 @@ RangeInt::RangeInt(int const min, int const max)
 		throw std::out_of_range("dumb ass");
 	}
 	lower_bound_ = min;
-	upper_bound_ = max;
+	upper_bound_ = max -1 ;
 }
 
 int RangeInt::get_lower() const noexcept
