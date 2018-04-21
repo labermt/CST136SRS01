@@ -183,7 +183,7 @@ RangeInt::RangeInt(int const min, int const max)
 {
 	if (min >= max)
 	{
-		throw std::out_of_range("dumb ass");
+		throw std::out_of_range("Lower Bound was greater than upper bound");
 	}
 	lower_bound_ = min;
 	upper_bound_ = max - 1;
