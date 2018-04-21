@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tvk/Desktop/CST136/CST136SRS01/ErrorHandling/gsl.h
+
+/Users/tvk/Desktop/CST136/CST136SRS01/ErrorHandling/main.cpp
+iostream
+-
+string
+-
+rangeInt.h
+/Users/tvk/Desktop/CST136/CST136SRS01/ErrorHandling/rangeInt.h
+
+/Users/tvk/Desktop/CST136/CST136SRS01/ErrorHandling/rangeInt.cpp
+rangeInt.h
+/Users/tvk/Desktop/CST136/CST136SRS01/ErrorHandling/rangeInt.h
+gsl.h
+/Users/tvk/Desktop/CST136/CST136SRS01/ErrorHandling/gsl.h
+
+/Users/tvk/Desktop/CST136/CST136SRS01/ErrorHandling/rangeInt.h
+iostream
+-
+limits
+-
+string
+-
+
