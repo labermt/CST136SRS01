@@ -9,7 +9,9 @@ Project Name(s): Exceptional
 Side info:
 Decided to chose in class initializers 
 http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c48-prefer-in-class-initializers-to-member-initializers-in-constructors-for-constant-initializers
-
+rangeint is a class because of the link above
+For this assignment, I worked as a group with classmates, their names were:
+Colin, Drew, Sasha, Thea, and Mike. 
 ---
 
 Purpose:

@@ -5,11 +5,11 @@
 class RangeInt
 {
 private:
-	static constexpr auto KUnboundLower{ std::numeric_limits<int>::max() - 1 };// these will never change, static is enforced for now but may go away 
 	static constexpr auto KUnboundUpper{ std::numeric_limits<int>::min() + 1 }; // these will never change 
+	static constexpr auto KUnboundLower{ std::numeric_limits<int>::max() - 1 };// these will never change, static is enforced for now but may go away 
 	int value_{ std::numeric_limits<int>::max()};
-	const int upperBound_{ KUnboundLower };
-	const int lowerBound_{ KUnboundUpper };
+	int upperBound_{ KUnboundLower };
+	int lowerBound_{ KUnboundUpper };
 
 public:
 	void setValue(int);
@@ -23,6 +23,7 @@ public:
 
 	void setLower(int); 
 	void setLower(short);
+	void setLower(float);
 	void setLower(unsigned);
 	void setLower(double);
 	void setLower(long); 
@@ -31,22 +32,16 @@ public:
 
 	void setUpper(int); 
 	void setUpper(short);
+	void setUpper(float); 
 	void setUpper(unsigned);
 	void setUpper(double);
 	void setUpper(long); 
 	void setUpper(char*);
 	void setUpper(std::string); 
 
-	int getValue() const;
-	int getUpper() const; 
-	int getLower() const; 
-	RangeInt()
-	{
-		upperBound_{};
-		lowerBound_{};
-	}
-	RangeInt(int min, int max) : lowerBound_{min}, upperBound_(max-1)
-	{
-
-	}
+	int getValue() const noexcept;
+	int getUpper() const noexcept; 
+	int getLower() const noexcept; 
+	RangeInt() = default; 
+	RangeInt(int const min, int const max); 
 };

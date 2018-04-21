@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\jen\desktop\cst136srs01\exceptional\main.cpp(43): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+c:\users\jen\desktop\cst136srs01\exceptional\main.cpp(26): warning C4101: 'e': unreferenced local variable
+c:\users\jen\desktop\cst136srs01\exceptional\main.cpp(36): warning C4101: 'e': unreferenced local variable
+  Exceptional.vcxproj -> C:\Users\jen\Desktop\CST136SRS01\x64\Debug\Exceptional.exe

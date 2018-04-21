@@ -45,7 +45,7 @@ void RangeInt::setValue(char* const setNum)
 	std::istringstream iss(setNum);
 	if (!(iss >> tempInt || iss.bad()))
 	{
-		throw std::out_of_range("Lower bound parameter is not valid");
+		throw std::out_of_range("Invalid Argument");
 	}
 }
 
@@ -55,14 +55,13 @@ void RangeInt::setValue(std::string const num)
 	std::istringstream iss(num);
 	if (!(iss >> tempInt || iss.bad()))
 	{
-		throw std::out_of_range("Lower bound parameter is not valid");
+		throw std::out_of_range("Invalid Argument");
 	}
-
 }
 
 void RangeInt::setLower(int const lowerNum)
 {
-	if (lowerNum < lowerBound_ || lowerNum >= upperBound_)
+	if (lowerNum > value_ || lowerNum <= upperBound_)
 	{
 		throw std::out_of_range("out of range!");
 	}
@@ -70,71 +69,129 @@ void RangeInt::setLower(int const lowerNum)
 
 }
 
-void RangeInt::setLower(short const num)
+void RangeInt::setLower(short const lowerNum)
 {
+	setValue(gsl::narrow<int>(lowerNum));
+}
+
+void RangeInt::setLower(float const lowerNum)
+{
+	setValue(gsl::narrow<int>(lowerNum));
+}
+
+void RangeInt::setLower(unsigned const lowerNum)
+{
+	setValue(gsl::narrow<int>(lowerNum));
+}
+
+void RangeInt::setLower(double const lowerNum)
+{
+	setValue(gsl::narrow<int>(lowerNum));
 
 }
 
-void RangeInt::setLower(unsigned const num)
+void RangeInt::setLower(long const lowerNum)
 {
-}
-
-void RangeInt::setLower(double const num)
-{
-}
-
-void RangeInt::setLower(long const num)
-{
-	
-}
-
-void RangeInt::setLower(char* const num)
-{
+	setValue(gsl::narrow<int>(lowerNum));
 
 }
 
-void RangeInt::setLower(std::string const num)
+void RangeInt::setLower(char* const lowerNum)
 {
-
+	int tempInt;
+	std::istringstream iss(lowerNum);
+	if (!(iss >> tempInt || iss.bad()))
+	{
+		throw std::out_of_range("Invalid Argument");
+	}
 }
 
-void RangeInt::setUpper(int const num)
+void RangeInt::setLower(std::string const lowerNum)
 {
+	int tempInt;
+	std::istringstream iss(lowerNum);
+	if (!(iss >> tempInt || iss.bad()))
+	{
+		throw std::out_of_range("Invalid Argument");
+	}
 }
 
-void RangeInt::setUpper(short const num)
+void RangeInt::setUpper(int const upper)
 {
+	if (upper < value_ || upper <= lowerBound_)
+	{
+		throw std::out_of_range("Upper bound out of range!");
+	}
+	upperBound_ = upper; 
 }
 
-void RangeInt::setUpper(unsigned const num)
+void RangeInt::setUpper(short const upper)
 {
+	setUpper(gsl::narrow<int>(upper));
 }
 
-void RangeInt::setUpper(double const num)
+void RangeInt::setUpper(float const upper)
 {
+	setUpper(gsl::narrow<int>(upper));
 }
 
-void RangeInt::setUpper(char* const num)
+void RangeInt::setUpper(unsigned const upper)
 {
-
+	setUpper(gsl::narrow<int>(upper));
 }
 
-void RangeInt::setUpper(std::string const num)
+void RangeInt::setUpper(double const upper)
 {
-
+	setUpper(gsl::narrow<int>(upper));
 }
 
-
-int RangeInt::getValue() const
+void RangeInt::setUpper(long upper)
 {
-	gsl::narrow<int>(value_);
+	setUpper(gsl::narrow<int>(upper));
 }
 
-int RangeInt::getUpper() const
+void RangeInt::setUpper(char* const upper)
 {
-
+	int tempInt;
+	std::istringstream iss(upper);
+	if (!(iss >> tempInt || iss.bad()))
+	{
+		throw std::out_of_range("Invalid Argument");
+	}
 }
 
-int RangeInt::getLower() const
+void RangeInt::setUpper(std::string const upper)
 {
+	int tempInt;
+	std::istringstream iss(upper);
+	if (!(iss >> tempInt || iss.bad()))
+	{
+		throw std::out_of_range("Invalid Argument");
+	}
 }
+
+int RangeInt::getValue() const noexcept
+{
+	return value_; 
+}
+
+int RangeInt::getUpper() const noexcept
+{
+	return value_; 
+}
+
+int RangeInt::getLower() const noexcept
+{
+	return value_; 
+}
+
+RangeInt::RangeInt(int const min, int const max)
+{
+	if (max <= min)
+	{
+		throw std::out_of_range("Out of range!"); 
+	}
+	lowerBound_ = min; 
+	upperBound_ = max; 
+}
+
