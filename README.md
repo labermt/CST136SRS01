@@ -1,7 +1,7 @@
 # CST136SRS01
 Mayday Mamate
 
-Grading Name: 
+Grading Name: Thea Van Kessel
 
 Solution Name: CST136SRS01  
 Project Name(s): Exceptional
@@ -39,3 +39,8 @@ Don't forget to use noexcept and const when and where applicable.
 Describe the reason(s) for your default ctor technique in the README.md.  
 
 Describe the reason you made RangeInt a struct or class. (see the cppguidelines for details.)
+
+
+I chose to use a class because a struct deals with changing data members. In my class I am using private data members and according to the cpp guidelines, private data members means you should use a class. 
+I am using a mac so I was unable to use gsl. For that reason, I have included code in a header file "gsl.h" to use the narrowing functionality. 
+The default constructor makes use of default values because they are already created in kUnboundUpper and kUnboundLower and it makes sense to use the max and min for an int. 
