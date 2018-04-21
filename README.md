@@ -1,10 +1,36 @@
 # CST136SRS01
 Mayday Mamate
 
-Grading Name: 
+Grading Name: Jared Muralt
 
 Solution Name: CST136SRS01  
 Project Name(s): Exceptional
+
+Reason for using a delegating default ctor:
+The delegating ctor allows me to use another constructor's definition and
+member initialization list instead of repeating the same code in another
+ctor. It is also easy to read and looks clean. In short, it reduces code
+duplication.
+
+Reason for using a class instead of a struct:
+The C++ Guidelines say "Use class rather than struct if any member is non-public".
+I assumed that our member variables would be private because it is safer, cleaner,
+and the SRS said to use getters and setters for the members. If any member variables
+were public, they would not need getters or setters.
+
+
+Issues:
+I don't understand what you meant (or what you were wanting to accomplish) by using constexpr bounds. 
+How are you supposed to have setters for constant member variables? Doesn't make sense to me. I feel
+like I'm seriously misunderstanding the specifications.
+
+I tried for hours to figure out what you wanted regarding "Handle narrowing conversions" but got nowhere.
+I would cast values to convert them to integers but I don't think that's what you are looking for.
+Therfore, the program only works with intergers (no strings, doubles, cstrings, etc). I tried overloading
+setters to work with otehr data types but the narrow function kept crashing the program and I couldn't
+figure it out.
+
+Well, I tried my best. :)
 
 ---
 
