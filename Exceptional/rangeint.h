@@ -3,6 +3,7 @@
 #include "gsl.h"
 #include <limits>
 #include <string>
+#include <sstream>
 
 class RangeInt
 {
@@ -14,12 +15,13 @@ private:
 	int value_ {std::numeric_limits<int>::max()};
 
 public:
-	RangeInt(int const lower, int const upper): lower_bound_{lower}, upper_bound_{upper} {}
+	RangeInt() = default;
+	RangeInt(int, int);
 
 public:
-	int get_lower() const;
-	int get_upper() const;
-	int get_value() const;
+	int get_lower() const noexcept;
+	int get_upper() const noexcept;
+	int get_value() const noexcept;
 
 	void set_lower(int);
 	void set_lower(unsigned);
@@ -47,9 +49,4 @@ public:
 	void set_value(double);
 	void set_value(char*);
 	void set_value(std::string);
-
-	void is_value_good();
-
-	//int static getIntFromConsole();
-
 };
