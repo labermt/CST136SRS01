@@ -22,6 +22,7 @@ void RangeInt::setValue(float const setNum)
 {
 	setValue(gsl::narrow<int>(setNum));
 }
+
 void RangeInt::setValue(unsigned const setNum)
 {
 	setValue(gsl::narrow<int>(setNum));
@@ -63,7 +64,7 @@ void RangeInt::setLower(int const lowerNum)
 {
 	if (lowerNum > value_ || lowerNum <= upperBound_)
 	{
-		throw std::out_of_range("out of range!");
+		throw std::out_of_range("Out of range!");
 	}
 	value_ = lowerNum;
 
