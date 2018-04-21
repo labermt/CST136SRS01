@@ -1,64 +1,86 @@
 #include "stdafx.h"
 #include "RangeInt.h"
+#include "ErrorHandler.h"
+#include <exception>
+#include <iostream>
+
+using namespace std;
 
 
-RangeInt::RangeInt()
-{
-
-	// Create a default ctor is unbound on both upper and lower values.
-	// Create the default ctor by delegating, default parameters, or default generation.
-
-}
-
-
-RangeInt::~RangeInt()
-{
+	RangeInt::RangeInt(int lowerBound, int upperBound)
+		:kUnboundLower{ false },
+		KUnboundUpper{ false }
+	{
+		setLowerBound(lowerBound);
+		setUpperBound(upperBound);
+	}
 
 
-}
+	// Handle narrowing conversions (float, double, long, unsigned, ...). 
+	int RangeInt::getLowerBound() const noexcept
+	{
+		return lowerBound;
+	}
 
 
-// Create a ctor that accepts: [lower bound, upper bound).
-RangeInt::RangeInt(int lowerBound, int upperBound)
-	:kUnboundLower{lowerBound}
-{
-	
-}
+	int RangeInt::getUpperBound() const noexcept
+	{
+		return upperBound;
+	}
 
 
-// Create lower bound and upper bound setters and getters. Handle narrowing conversions (float, double, long, unsigned, ...). Allow std::string and c-strings for setters and handle non-valid strings
-const int RangeInt::getLowerBound() const
-{
-
-}
-
-const int RangeInt::getUpperBound() const
-{
-
-}
-
-void RangeInt::setLowerBound(int lowerBound)
-{
-
-}
-
-void RangeInt::setUpperBound(int upperBound)
-{
-
-}
-
-// Create setters for the value and throw an exception if the value exceeds the bounds. Ensure a strong exception guarantee.
-void RangeInt::setValue(int value)
-{
-
-}
-
-// Create a getter for the value.
-const int RangeInt::getValue() const
-{
-
-}
+	void RangeInt::setLowerBound(int lowerBoundValue)
+	{
+		lowerBound = lowerBoundValue;
+	}
 
 
-// Devise a strategy for dealing with changing bounds when the value is outside the bounds
+	// throws error if a string is passed
+	void RangeInt::setLowerBound(string lowerBoundValue)
+	{
+		throw ErrorHandler::notValidInt();
+	}
 
+
+	// throws error if a c-string is passed
+	void setLowerBound(const char lowerBoundValue)
+	{
+		throw ErrorHandler::notValidInt();
+	}
+
+
+	void RangeInt::setUpperBound(int upperBoundValue)
+	{
+		upperBound = upperBoundValue;
+	}
+
+
+	// throws error if a string is passed
+	void RangeInt::setUpperBound(string upperBoundValue)
+	{
+		throw ErrorHandler::notValidInt();
+	}
+
+
+	// throws error if a c-string is passed
+	void setUpperBound(const char upperBoundValue)
+	{
+		throw ErrorHandler::notValidInt();
+	}
+
+
+	void RangeInt::setValue(int value)
+	{
+
+		// verify that the value being set is within the bounds and that 
+		if (value < lowerBound && kUnboundLower == false
+			|| value > upperBound && KUnboundUpper == false)
+			throw ErrorHandler::outOfBounds();
+		chosenValue = value;
+	}
+
+
+	int RangeInt::getValue() const noexcept
+	{
+		return chosenValue;
+	}

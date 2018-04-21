@@ -1,24 +1,37 @@
 #pragma once
+#include <string>
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
 class RangeInt
 {
-	int lowerValue{ 0 };
-	int upperValue{ 0 };
-	const int kUnboundLower{ 0 };
-	const int KUnboundUpper{ 0 };
+	int lowerBound{ 0 };
+	int upperBound{ 0 };
+	const bool kUnboundLower{ true };
+	const bool KUnboundUpper{ true };
+	int chosenValue{ 0 };
+	string test;
+
 
 public:
 	RangeInt() = default;	// sets all members to their default values
-	~RangeInt();
-	RangeInt(int lowerBound, int upperBound);
+	RangeInt(const int lowerBound, const int upperBound);
 
-	const int getLowerBound() const;
-	const int getUpperBound() const;
+	int getLowerBound() const noexcept;
+	int getUpperBound() const noexcept;
 
-	void setLowerBound(int lowerBound);
-	void setUpperBound(int upperBound);
+	void setLowerBound(const int lowerBoundValue);
+	void setLowerBound(const string lowerBoundValue);
+	void setLowerBound(const char lowerBoundValue);
 
-	void setValue(int value);
+	void setUpperBound(const int upperBoundValue);
+	void setUpperBound(const string upperBoundValue);
+	void setUpperBound(const char upperBoundValue);
 
-	const int getValue() const;
+	void setValue(const int value);
+
+	int getValue() const noexcept;
 };
 
