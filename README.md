@@ -1,14 +1,33 @@
 # CST136SRS01
 Mayday Mamate
 
-Grading Name: 
+Name: Andrew Deraita
+
+Grading Name: Volbeat
 
 Solution Name: CST136SRS01  
 Project Name(s): Exceptional
 
 ---
 
-Purpose:
+ The `Rangeint()` constructor initializes members using default parameters as suggested in [section C.48 of the C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c48-prefer-in-class-initializers-to-member-initializers-in-constructors-for-constant-initializers).
+
+ The `RangeInt` class is a class and not a struct, as it has private data members as per [section C.8 of the C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c8-use-class-rather-than-struct-if-any-member-is-non-public) 
+ 
+ 
+ ## Notes
+ 
+ ---
+ 
+ I worked together with Mike, An, Sasha, Thea and Colin on this project.
+
+The constructor `RangeInt(int,int)` requires parameters of fundamental type convertable to `int` to be used. An extension of the class `RangeInt` could be to add the ability to interpert different data types as parameters for the constructor.
+
+Likewise, `get_value(double)` throws an exception if there is no exact translation between `double` and `int`, whereas it may be more useful to round to the nearest `int` instead of throwing.
+
+---
+
+## Purpose:
 
 - Pratice using various C++ error handling mechanisms.
 - Learn to use C++ exceptions.
