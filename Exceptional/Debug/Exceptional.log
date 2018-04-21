@@ -1,14 +1,1 @@
-﻿  RangeInt.cpp
-  main.cpp
-d:\homework\cst136\cst136srs01\exceptional\main.cpp(24): warning C4101: 'e': unreferenced local variable
-d:\homework\cst136\cst136srs01\exceptional\main.cpp(38): warning C4101: 'e': unreferenced local variable
-d:\homework\cst136\cst136srs01\exceptional\main.cpp(52): warning C4101: 'e': unreferenced local variable
-d:\homework\cst136\cst136srs01\exceptional\main.cpp(66): warning C4101: 'e': unreferenced local variable
-d:\homework\cst136\cst136srs01\exceptional\main.cpp(80): warning C4101: 'e': unreferenced local variable
-d:\homework\cst136\cst136srs01\exceptional\main.cpp(94): warning C4101: 'e': unreferenced local variable
-d:\homework\cst136\cst136srs01\exceptional\main.cpp(108): warning C4101: 'e': unreferenced local variable
-d:\homework\cst136\cst136srs01\exceptional\main.cpp(123): warning C4101: 'e': unreferenced local variable
-d:\homework\cst136\cst136srs01\exceptional\main.cpp(137): warning C4101: 'e': unreferenced local variable
-d:\homework\cst136\cst136srs01\exceptional\main.cpp(151): warning C4101: 'e': unreferenced local variable
-  Generating Code...
-  Exceptional.vcxproj -> D:\Homework\CST136\CST136SRS01\Debug\Exceptional.exe
+﻿

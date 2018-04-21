@@ -7,7 +7,9 @@ Grading Name: Fennekin
 Solution Name: CST136SRS01
 Project Name(s): Exceptional
 
-Notes: constructor needs to take default types convertable to int, else exception will be thrown.
+Notes: 
+- constructor needs to take default types convertable to int, else exception will be thrown.
+- using floating point number example: 10.5 will result in exception, floating point number has to be an exact int value exaple 10.0
 
 ---
 

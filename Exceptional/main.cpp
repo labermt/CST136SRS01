@@ -23,6 +23,7 @@ int main()
 
 	catch (std::out_of_range &e)
 	{
+		e.what();
 		++errors;
 	}
 
@@ -37,6 +38,7 @@ int main()
 
 	catch (std::out_of_range &e)
 	{
+		e.what();
 		++errors;
 	}
 
@@ -51,6 +53,7 @@ int main()
 
 	catch (std::out_of_range &e)
 	{
+		e.what();
 		++errors;
 	}
 
@@ -65,6 +68,7 @@ int main()
 
 	catch (std::out_of_range &e)
 	{
+		e.what();
 		++errors;
 	}
 
@@ -79,6 +83,7 @@ int main()
 
 	catch (std::out_of_range &e)
 	{
+		e.what();
 		++errors;
 	}
 
@@ -93,6 +98,7 @@ int main()
 
 	catch (std::out_of_range &e)
 	{
+		e.what();
 		++errors;
 	}
 
@@ -107,6 +113,7 @@ int main()
 
 	catch (std::invalid_argument &e)
 	{
+		e.what();
 		++errors;
 	}
 
@@ -122,6 +129,7 @@ int main()
 
 	catch (std::out_of_range &e)
 	{
+		e.what();
 		++errors;
 	}
 
@@ -136,6 +144,24 @@ int main()
 
 	catch (std::out_of_range &e)
 	{
+		e.what();
+		++errors;
+	}
+
+	try
+	{
+
+		++test_cases;
+		RangeInt test(15, 25);
+		auto const uns_int = 17;
+		test.set_value(uns_int);
+		test.set_lower(18); //error
+		++good_tests;
+	}
+
+	catch (std::out_of_range &e)
+	{
+		e.what();
 		++errors;
 	}
 
@@ -151,12 +177,14 @@ int main()
 	catch (std::out_of_range &e)
 	{
 		//wont hit error because looking for wrong error type
+		e.what();
 		++errors;
 	}
 
 	catch (...)
 	{
-		//catches errors I didnt account for
+		//catches errors I didnt account for on purpose to show catch (...)
+		//cant use e.what() because I am not looking for a specific error
 		++unaccounted_errors;
 	}
 
