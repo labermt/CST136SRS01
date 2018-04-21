@@ -6,6 +6,8 @@ Grading Name:
 Solution Name: CST136SRS01  
 Project Name(s): Exceptional
 
+Possible Issue: I was unsure of the best strategy to show my RangeInt class cleanly without using std::cout, which may be considered excessive i/o.  
+
 Misc. Notes:  
 
 Reason for bound change strategy: The two strategies I was debating between were to move value_ and to throw an exception. I decided that, if somebody were to try and use this class for their own purposes & changed the bounds, they were likely wanting to change what they were checking. It's most likely that they wanted to change the bounds and *then* the value. If RangeInt threw an exception, it would force the user of the class to check the value every time they tried changing bounds, which would make the class cumbersome and overly frustrating to use.  

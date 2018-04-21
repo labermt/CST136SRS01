@@ -38,6 +38,21 @@ void RangeInt::setLower(const long double lower)
 		throw std::range_error("The number you entered has a floating point, so a narrowing conversion is impossible.");
 	}
 
+	if (lower >= upper_)
+	{
+		try
+		{
+			setUpper(lower + 1);
+		}
+		catch (std::range_error e) // Only possible error is for the lower bound to be less than the min size of an int
+		{
+			std::stringstream stream;
+			stream << "The value for the lower bound you entered cannot be used because it will force the upper bound outside of the range of a signed int. (";
+			stream << lower + 1 << " > " << std::numeric_limits<int>::max() << ")";
+			throw std::range_error(stream.str());
+		}
+	}
+
 	if(lower > value_) // Will describe strategy in presentation. To put it short, someone changing the bounds of the RangeInt likely doesn't want to have to check the value first, so no exception
 	{
 		value_ = lower;
@@ -87,6 +102,21 @@ void RangeInt::setUpper(const long double upper)
 	if (upper != floor(upper))
 	{
 		throw std::range_error("The number you entered has a floating point, so a narrowing conversion is impossible.");
+	}
+
+	if (upper <= lower_)
+	{
+		try
+		{
+			setLower(upper - 1);
+		}
+		catch (std::range_error e) // Only possible error is for the lower bound to be less than the min size of an int
+		{
+			std::stringstream stream;
+			stream << "The value for the upper bound you entered cannot be used because it will force the lower bound outside of the range of a signed int. (";
+			stream << upper - 1 << " < " << std::numeric_limits<int>::min() << ")";
+			throw std::range_error(stream.str());
+		}
 	}
 
 	if (upper <= value_) // Will describe strategy in presentation. To put it short, someone changing the bounds of the RangeInt likely doesn't want to have to check the value first, so no exception
