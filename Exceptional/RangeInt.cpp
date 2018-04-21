@@ -4,10 +4,6 @@
 #include <sstream>
 #include <gsl.h>
 
-
-
-
-
 RangeInt::RangeInt(int const min, int const max)
 {
 	if (min >= max)
@@ -58,7 +54,7 @@ void RangeInt::set_value(unsigned const num)
 void RangeInt::set_value(string const num)
 {
 	auto int_num{ 0 };
-	std::istringstream iss(num);
+	istringstream iss(num);
 	if (!(iss >> int_num) || iss.bad())
 	{
 		throw std::invalid_argument("String was bad");
@@ -75,7 +71,7 @@ void RangeInt::set_value(float const num)
 void RangeInt::set_value(char const num)
 {
 	auto int_num{ 0 };
-	std::istringstream iss(num);
+	istringstream iss(num);
 	if (!(iss >> int_num || iss.bad()))
 	{
 		throw std::invalid_argument("String was bad");
@@ -86,7 +82,7 @@ void RangeInt::set_value(char const num)
 void RangeInt::set_value(char* const num)
 {
 	auto int_num{ 0 };
-	std::istringstream iss(num);
+	istringstream iss(num);
 	if (!(iss >> int_num || iss.bad()))
 	{
 		throw std::invalid_argument("String was bad");
@@ -127,7 +123,8 @@ void RangeInt::set_lower(unsigned const num)
 
 void RangeInt::set_lower(string const num)
 {
-	std::istringstream iss(num);
+	auto int_num{ 0 };
+	istringstream iss(num);
 	if (!(iss >> int_num || iss.bad()))
 	{
 		throw std::invalid_argument("String was bad");
@@ -145,7 +142,7 @@ void RangeInt::set_lower(char const num)
 {
 	
 	auto int_num{ 0 };
-	std::istringstream iss(num);
+	istringstream iss(num);
 	if (!(iss >> int_num || iss.bad()))
 	{
 		throw std::invalid_argument("String was bad");
@@ -156,7 +153,7 @@ void RangeInt::set_lower(char const num)
 void RangeInt::set_lower(char* const num)
 {
 	auto int_num{ 0 };
-	std::istringstream iss(num);
+	istringstream iss(num);
 	if (!(iss >> int_num || iss.bad()))
 	{
 		throw std::invalid_argument("String was bad");
@@ -187,7 +184,7 @@ void RangeInt::set_upper(unsigned const num)
 void RangeInt::set_upper(string const num)
 {
 	auto int_num{ 0 };
-	std::istringstream iss(num);
+	istringstream iss(num);
 	if (!(iss >> int_num || iss.bad()))
 	{
 		throw std::invalid_argument("String was bad");
@@ -204,7 +201,7 @@ void RangeInt::set_upper(float const num)
 void RangeInt::set_upper(char const num)
 {
 	auto int_num{ 0 };
-	std::istringstream iss(num);
+	istringstream iss(num);
 	if (!(iss >> int_num || iss.bad()))
 	{
 		throw std::invalid_argument("String was bad");
@@ -215,7 +212,7 @@ void RangeInt::set_upper(char const num)
 void RangeInt::set_upper(char* const num)
 {
 	auto int_num{ 0 };
-	std::istringstream iss(num);
+	istringstream iss(num);
 	if (!(iss >> int_num || iss.bad()))
 	{
 		throw std::invalid_argument("String was bad");
