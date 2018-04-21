@@ -12,15 +12,15 @@ public:
 	RangeInt(const int lower = kUnboundLower, const int upper = kUnboundUpper);
 
 public:
-	void setLower(long double lower);
+	void setLower(const long double lower);
 	void setLower(const std::string& lowerStr);
 	int getLower() const noexcept;
 
-	void setUpper(long double upper);
+	void setUpper(const long double upper);
 	void setUpper(const std::string& upperStr);
 	int getUpper() const noexcept;
 
-	void setValue(long double value);
+	void setValue(const long double value);
 	void setValue(const std::string& valueStr);
 	int getValue() const noexcept;
 
