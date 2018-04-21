@@ -74,13 +74,13 @@ void RangeInt::set_value(float const num)
 
 void RangeInt::set_value(char const num)
 {
-	istringstream iss(value_);
-
-	int temp;
-
-	iss >> temp;
-
-	set_value(temp); 
+	auto int_num{ 0 };
+	std::istringstream iss(num);
+	if (!(iss >> int_num || iss.bad()))
+	{
+		throw std::invalid_argument("String was bad");
+	}
+	set_value(int_num);
 }
 
 void RangeInt::set_value(char* const num)
@@ -127,13 +127,12 @@ void RangeInt::set_lower(unsigned const num)
 
 void RangeInt::set_lower(string const num)
 {
-	istringstream iss(value_);
-
-	int temp;
-
-	iss >> temp;
-
-	set_value(temp); 
+	std::istringstream iss(num);
+	if (!(iss >> int_num || iss.bad()))
+	{
+		throw std::invalid_argument("String was bad");
+	}
+	set_lower(int_num);
 }
 
 
@@ -144,13 +143,14 @@ void RangeInt::set_lower(float const num)
 
 void RangeInt::set_lower(char const num)
 {
-	istringstream iss(value_);
-
-	int temp;
-
-	iss >> temp;
-
-	set_value(temp); 
+	
+	auto int_num{ 0 };
+	std::istringstream iss(num);
+	if (!(iss >> int_num || iss.bad()))
+	{
+		throw std::invalid_argument("String was bad");
+	}
+	set_lower(int_num);
 }
 
 void RangeInt::set_lower(char* const num)
@@ -186,13 +186,13 @@ void RangeInt::set_upper(unsigned const num)
 
 void RangeInt::set_upper(string const num)
 {
-	istringstream iss(value_);
-
-	int temp;
-
-	iss >> temp;
-
-	set_value(temp); 
+	auto int_num{ 0 };
+	std::istringstream iss(num);
+	if (!(iss >> int_num || iss.bad()))
+	{
+		throw std::invalid_argument("String was bad");
+	}
+	set_upper(int_num);
 }
 
 
@@ -203,13 +203,13 @@ void RangeInt::set_upper(float const num)
 
 void RangeInt::set_upper(char const num)
 {
-	istringstream iss(value_);
-
-	int temp;
-
-	iss >> temp;
-
-	set_value(temp); 
+	auto int_num{ 0 };
+	std::istringstream iss(num);
+	if (!(iss >> int_num || iss.bad()))
+	{
+		throw std::invalid_argument("String was bad");
+	}
+	set_upper(int_num);
 }
 
 void RangeInt::set_upper(char* const num)
