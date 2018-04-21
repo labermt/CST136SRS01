@@ -6,6 +6,10 @@ Grading Name: Anil Coklar
 Solution Name: CST136SRS01  
 Project Name(s): Exceptional
 
+Side info:
+Decided to chose in class initializers 
+http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c48-prefer-in-class-initializers-to-member-initializers-in-constructors-for-constant-initializers
+
 ---
 
 Purpose:
