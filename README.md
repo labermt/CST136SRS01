@@ -1,7 +1,7 @@
 # CST136SRS01
 Mayday Mamate
 
-Grading Name: Ralts
+Grading Name: Jordan Clark
 
 Solution Name: CST136SRS01  
 Project Name(s): Exceptional
